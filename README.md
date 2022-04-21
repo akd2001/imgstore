@@ -1,2 +1,2 @@
 # imgstore
-simple image gallary
+simple image gallery
