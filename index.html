@@ -13,15 +13,22 @@
 </head>
 
 <body>
-    <header id="head">
+    <input type="checkbox" id="menuBarToggle">
+    <header id="head" class="head">
         <div id="logo">
-            <h1>IMAG<span>E GALLERY</span></h1>
+            <h1>EMAGI<span>FY</span></h1>
         </div>
+        
+        <label for="menuBarToggle" id="menuBarToggleCheck">
+            <div class="barStyle top"></div>
+            <div class="barStyle middle"></div>
+            <div class="barStyle bottom"></div>
+        </label>
         <nav id="navbar">
             <ul>
                 <li class="active">
-                        <i class="fa-solid fa-house-chimney"></i>
-                        <a href="#home" class="navBtn">Home</a>
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <a href="#home" class="navBtn">Home</a>
                 </li>
 
                 <li>
@@ -31,15 +38,14 @@
 
                 <li>
                     <i class="fa-solid fa-envelope"></i>
-                        <a href="#help" class="navBtn">Help</a>
+                    <a href="#help" class="navBtn">Help</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-file"></i>
-                        <a href="#about" class="navBtn">About</a>
+                    <a href="#about" class="navBtn">About</a>
                 </li>
             </ul>
         </nav>
-
         <div id="button">
             <button id="uploadBtn">
                 <i class="fa-solid fa-upload"></i>

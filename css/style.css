@@ -104,6 +104,39 @@ header {
     transition: all .2s linear ;
 }
 
+#menuBarToggleCheck {
+    width: 5vw;
+    height: 80%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#menuBarToggle {
+    display: none;
+}
+
+.barStyle {
+    width: 100%;
+    background-color: var(--themeColor);
+    border-radius: 1rem;
+    transition: all .3s linear;
+}
+
+.top {
+    height: 13%;
+}
+
+.middle {
+    margin: 11% 0%;
+    height: 13%;
+}
+
+.bottom {
+    height: 13%;
+}
+
 
 
 #navbar ul li:hover::after {

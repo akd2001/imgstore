@@ -1,15 +1,47 @@
 @media only screen and (max-width: 1320px) {
-    html{
+    html {
         font-size: 90%;
     }
 }
 
 @media only screen and (max-width: 1024px) {
-    html{
+    html {
         font-size: 76%;
     }
 }
 
 @media only screen and (max-width: 900px) {
-   
+
+    #navbar {
+        display: none;
+    }
+
+    #menuBarToggleCheck {
+        display: flex;
+    }
+
+    #menuBarToggle:checked ~  header #navbar {
+        display: none;
+    }
+
+    #menuBarToggle:checked ~ header #menuBarToggleCheck .top {
+        transform: rotate(-135deg);
+        position: relative;
+        top: 21%;
+    }
+
+    #menuBarToggle:checked ~ header #menuBarToggleCheck .middle {
+        opacity: 0;
+    }
+
+    #menuBarToggle:checked ~ header #menuBarToggleCheck .bottom {
+        transform: rotate(135deg);
+        position: relative;
+        bottom: 21%;
+    }
+    
+
+
+
+    
 }
