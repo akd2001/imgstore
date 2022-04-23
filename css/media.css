@@ -13,7 +13,40 @@
 @media only screen and (max-width: 900px) {
 
     #navbar {
-        display: none;
+        background-color: var(--themeBgColor);
+        display: flex;
+        position: absolute;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 1rem;
+        padding-top: 3rem;
+        top: 9vh;
+        left: 0;
+        height: 91vh;
+        width: 30%;
+        transition: all .3s linear;
+        transform: translateX(-800px);
+    }
+
+    #navbar ul {
+        width: auto;
+        flex-direction: column;
+    }
+
+    #navbar ul li {
+        justify-content: flex-start;
+        width: 27vw;
+    }
+
+    #button {
+        margin-top: 9%;
+        width: 27vw;
+        height: auto;
+    }
+
+    #uploadBtn {
+        width: 50%;
+        height: 6vh;
     }
 
     #menuBarToggleCheck {
@@ -21,27 +54,27 @@
     }
 
     #menuBarToggle:checked ~  header #navbar {
-        display: none;
+        transform: translateX(0px);
     }
 
-    #menuBarToggle:checked ~ header #menuBarToggleCheck .top {
+    #menuBarToggle:checked~header #menuBarToggleCheck .top {
         transform: rotate(-135deg);
         position: relative;
         top: 21%;
     }
 
-    #menuBarToggle:checked ~ header #menuBarToggleCheck .middle {
+    #menuBarToggle:checked~header #menuBarToggleCheck .middle {
         opacity: 0;
     }
 
-    #menuBarToggle:checked ~ header #menuBarToggleCheck .bottom {
+    #menuBarToggle:checked~header #menuBarToggleCheck .bottom {
         transform: rotate(135deg);
         position: relative;
         bottom: 21%;
     }
-    
 
 
 
-    
+
+
 }
