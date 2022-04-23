@@ -13,17 +13,27 @@ li.forEach(element => {
 
 //media query target
 
-const mediaQuery = window.matchMedia('(max-width: 900px)');
+const mediaOne = window.matchMedia('(max-width: 900px)');
+const mediaTwo = window.matchMedia('(max-width: 700px)');
+
+let uploadBtn = document.querySelector('#button');
+let navBar = document.querySelector("#navbar ul");
 
 function handleTabletChange(e) {
-    let uploadBtn = document.querySelector('#button');
     if (e.matches) {
-        let navBar = document.querySelector("#navbar ul");
         navBar.appendChild(uploadBtn);
-    } else{
+    } else {
         let header = document.querySelector("#head");
         header.appendChild(uploadBtn);
     }
 }
-mediaQuery.addListener(handleTabletChange);
-handleTabletChange(mediaQuery);   
+
+function handleMobileChange(e) {
+    if (e.matches) {
+        console.log("hello world");
+    } 
+}
+mediaOne.addListener(handleTabletChange);
+mediaTwo.addListener(handleMobileChange);
+handleTabletChange(mediaOne);   
+handleMobileChange(mediaTwo);   

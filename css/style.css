@@ -166,7 +166,6 @@ header {
 
 #navbar ul li a {
     z-index: 1;
-    font-size: 1vw;
     text-decoration: none;
     color: var(--textColor);
     font-weight: bold;
@@ -189,7 +188,7 @@ header {
     background-color: var(--themeColor);
     border: none;
     color: var(--themeBgColor);
-    font-size: 1vw;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: all .2s linear;
