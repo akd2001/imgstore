@@ -5,7 +5,7 @@
 */
 
 @media only screen and (max-width: 1320px) {
-    html{
+    html {
         font-size: 90%;
     }
 }
@@ -15,7 +15,7 @@
     html {
         font-size: 76%;
     }
-    
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -94,5 +94,117 @@
 }
 
 @media only screen and (max-width: 600px) {
+
+    html {
+        font-size: 62%;
+    }
+
+    #navbar {
+        padding-left: 0;
+        padding-top: 0;
+        position: fixed;
+        bottom: 1rem;
+        top: initial;
+        height: auto;
+        width: 100%;
+        transform: initial;
+        justify-content: center;
+        background: transparent;
+    }
+
+    #navbar ul {
+        background-color: var(--themeBgColor);
+        width: 90%;
+        border-bottom-left-radius: 10vw;
+        border-bottom-right-radius: 10vw;
+        box-shadow: -2px 9px 21px -5px rgba(105, 105, 105, 1);
+        flex-direction: row;
+    }
+
+    #navbar ul li:nth-child(1){
+        border-bottom-left-radius: 10vw;
+    }
+
+    #navbar ul li:nth-child(5){
+        border-bottom-right-radius: 10vw;
+    }
+
+    #navbar ul li {
+        height: 9vh;
+        justify-content: center;
+        width: 27vw;
+        flex-direction: column;
+    }
+
+    #navbar ul li i {
+        font-size: 1.9rem;
+    }
+
+    #navbar ul li a span {
+        display: none;
+    }
+
+    #navbar ul li.active span{
+        display: block;
+        margin-top: 5%;
+    }
+
+    #navbar ul li.active {
+        background-color: transparent;
+        filter: initial;
+    }
+
+    #navbar ul li.active i, #navbar ul li.active a {
+        letter-spacing: 0;
+        font-size: 1.5rem;
+        color: var(--themeColor);
+    }
     
+
+    #navbar ul li:hover::after {
+        width: 0;
+    }
+
+    #button {
+        margin-top: 0;
+        position: relative;
+        bottom: 4vh;
+    }
+
+    #uploadBtn {
+        clip-path: circle();
+        width: 18vw;
+        height: 9vh;
+        font-size: 1.9rem;
+        background-color: var(--textColor);
+    }
+
+    #uploadBtn span {
+        display: none;
+    }
+
+    #menuBarToggleCheck {
+        display: none;
+    }
+
+
+}
+
+@media only screen and (max-width: 425px) {
+    html{
+        font-size: 58%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    html{
+        font-size: 52%;
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    html{
+        font-size: 45%;
+    }
 }

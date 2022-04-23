@@ -152,6 +152,7 @@ header {
     z-index: 1;
     color: var(--textColor);
     margin: 0% 3%;
+    transition: all .2s linear;
 }
 
 #navbar ul li.active::after {
@@ -175,7 +176,6 @@ header {
     text-decoration: none;
     color: var(--textColor);
     font-weight: bold;
-    text-transform: uppercase;
     letter-spacing: .1rem;
     transition: all .2s linear;
 }
