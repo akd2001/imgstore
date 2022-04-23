@@ -1,3 +1,11 @@
+
+/*
+*    DEVELOPERS :-
+*    © SAYANDEEP KARAK    © sayandeep18.webdev@gmail.com    https://github.com/fuchu2003
+*    © ARNAB KUMAR DAS    © electroarnab2001@gmail.com    https://github.com/akd2001
+*/
+
+
 //navbar active class
 
 let li = document.querySelectorAll('li');
@@ -20,7 +28,7 @@ function handleTabletChange(e) {
     if (e.matches) {
         let navBar = document.querySelector("#navbar ul");
         navBar.appendChild(uploadBtn);
-    } else{
+    } else {
         let header = document.querySelector("#head");
         header.appendChild(uploadBtn);
     }
