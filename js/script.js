@@ -22,10 +22,11 @@ li.forEach(element => {
 //media query target
 
 const mediaOne = window.matchMedia('(max-width: 900px)');
-const mediaTwo = window.matchMedia('(max-width: 700px)');
+const mediaTwo = window.matchMedia('(max-width: 600px)');
 
 let uploadBtn = document.querySelector('#button');
 let navBar = document.querySelector("#navbar ul");
+let helpBtn = document.getElementById("helpBtn");
 
 function handleTabletChange(e) {
     if (e.matches) {
@@ -38,8 +39,11 @@ function handleTabletChange(e) {
 
 function handleMobileChange(e) {
     if (e.matches) {
-        console.log("hello world");
-    } 
+        navBar.insertBefore(uploadBtn, helpBtn);
+    } else {
+        mediaOne.addListener(handleTabletChange);
+        handleTabletChange(mediaOne);
+    }
 }
 mediaOne.addListener(handleTabletChange);
 mediaTwo.addListener(handleMobileChange);
