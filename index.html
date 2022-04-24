@@ -16,13 +16,16 @@
     <title>Image Gallery</title>
     <script src="https://kit.fontawesome.com/19fb5e3787.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 
 </head>
 
 <body>
+
     <input type="checkbox" id="menuBarToggle">
+    <!-- header and navbar -->
     <header id="head" class="head">
         <div id="logo">
             <h1>EMAGI<span>FY</span></h1>
@@ -62,7 +65,69 @@
             </button>
         </div>
     </header>
-    <script src="js/script.js"></script>
+
+    <!-- signup and login popup form -->
+
+    <div id="formSection">
+        <div id="mainCard">
+            <div id="closeForm">+</div>
+            <div id="image">
+
+            </div>
+            <div id="forms">
+
+                <input type="radio" name="toggleForm" id="loginTgl" class="toggleForm" checked>
+                <input type="radio" name="toggleForm" id="signupTgl" class="toggleForm">
+                
+                <div id="formToggleBtn">
+                    <div id="toggleSwitch"></div>
+                    <button>
+                        <label for="loginTgl">
+                            <h1>Login</h1>
+                        </label>
+                    </button>
+                    <button>
+                        <label for="signupTgl">
+                            <h1>Sign up</h1>
+                        </label>
+                    </button>
+                </div>
+
+                <div id="flipForm">
+                    <div id="frontcard">
+                        <div class="social-icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <i class="fa-brands fa-skype"></i>
+                        </div>
+                        <form action="">
+                            <div class="inputs">
+                                <label for="username">
+                                    <i class="fa-solid fa-user"></i>
+                                </label>
+                                <input type="text" name="" id="username" class="username">
+                            </div>
+                            <div class="inputs">
+                                <label for="password">
+                                    <i class="fa-solid fa-unlock"></i>
+                                </label>
+                                <input type="password" name="" id="password" class="password">
+                            </div>
+                            <button>
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                                Login
+                            </button>
+                        </form>
+                    </div>
+                    <div id="backcard">
+                        back
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>
