@@ -67,7 +67,7 @@
     height: 100%;
     width: 55%;
     background: url("/img/formCover.jpg");
-    filter: drop-shadow(11px 8px 14px #848484);
+    filter: drop-shadow(11px 8px 14px #acacac);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -103,6 +103,8 @@
 }
 
 #formToggleBtn button label {
+    font-size: 2vw;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -164,7 +166,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 6%;
+    padding: 3%;
 }
 
 #backcard {
@@ -177,6 +179,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 3%;
 }
 
 .formHead {
@@ -184,7 +187,8 @@
     padding: 3%;
 }
 
-.formHead h1 {
+.formHead p {
+    font-size: 2vw;
     cursor: default;
     color: var(--textColor);
     font-family: 'Poppins', sans-serif;
