@@ -66,7 +66,7 @@
     border-radius: 2rem;
     height: 100%;
     width: 55%;
-    background: url(/img/formCover.jpg);
+    background: url(../img/formCover.jpg);
     filter: drop-shadow(11px 8px 14px #848484);
     background-repeat: no-repeat;
     background-size: cover;
@@ -106,11 +106,11 @@
     cursor: pointer;
 }
 
-#formToggleBtn button:nth-child(2){
+#formToggleBtn button:nth-child(2) {
     color: var(--themeBgColor);
 }
 
-#formBtnToggle{
+#formBtnToggle {
     display: none;
 }
 
@@ -125,15 +125,15 @@
     transition: all .4s linear;
 }
 
-#signupTgl:checked ~ #formToggleBtn #toggleSwitch {
+#signupTgl:checked~#formToggleBtn #toggleSwitch {
     left: 50%;
 }
 
-#signupTgl:checked ~ #formToggleBtn button:nth-child(2){
+#signupTgl:checked~#formToggleBtn button:nth-child(2) {
     color: var(--themeColor);
 }
 
-#signupTgl:checked ~ #formToggleBtn button:nth-child(3){
+#signupTgl:checked~#formToggleBtn button:nth-child(3) {
     color: var(--themeBgColor);
 }
 
@@ -151,7 +151,7 @@
     transition: all .4s linear;
 }
 
-#signupTgl:checked ~ #flipForm {
+#signupTgl:checked~#flipForm {
     transform: rotateY(180deg);
 }
 
@@ -215,7 +215,7 @@
     transform: translateY(-5px);
     color: var(--themeColor);
     border-color: var(--themeColor);
-} 
+}
 
 #loginForm {
     height: auto;
