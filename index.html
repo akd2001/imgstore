@@ -66,6 +66,10 @@
         </div>
     </header>
 
+    <div id="openPopup">
+        <button id="openpopBtn">Login / Sign Up</button>
+    </div>
+
     <!-- signup and login popup form -->
 
     <div id="formSection">
@@ -93,34 +97,81 @@
                     </button>
                 </div>
 
+                <!-- flip card of form  -->
+
                 <div id="flipForm">
+
+                    <!-- front of form or login  -->
+
                     <div id="frontcard">
+                        <div class="formHead">
+                            <h1>Good to see you again</h1>
+                        </div>
                         <div class="social-icon">
                             <i class="fa-brands fa-facebook-f"></i>
                             <i class="fa-brands fa-linkedin-in"></i>
-                            <i class="fa-brands fa-skype"></i>
+                            <i class="fa-brands fa-twitter"></i>
                         </div>
-                        <form action="">
+                        <form action="" id="loginForm">
                             <div class="inputs">
-                                <label for="username">
+                                <label for="loginUsername">
                                     <i class="fa-solid fa-user"></i>
                                 </label>
-                                <input type="text" name="" id="username" class="username">
+                                <input type="text" name="" id="loginUsername" class="inputFields" placeholder="Username">
                             </div>
                             <div class="inputs">
-                                <label for="password">
+                                <label for="loginPassword">
                                     <i class="fa-solid fa-unlock"></i>
                                 </label>
-                                <input type="password" name="" id="password" class="password">
+                                <input type="password" name="" id="loginPassword" class="inputFields" placeholder="Password">
                             </div>
-                            <button>
-                                <i class="fa-solid fa-right-to-bracket"></i>
-                                Login
-                            </button>
+                            <div class="sub-Btns">
+                                <button class="form-sub-btn">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                    Login
+                                </button>
+                            </div>
                         </form>
                     </div>
+
+                    <!-- back of form or sign up -->
+
                     <div id="backcard">
-                        back
+                        <div class="formHead">
+                            <h1>Get Start</h1>
+                        </div>
+                        <form action="" id="signupForm">
+                            <div class="inputs">
+                                <label for="signupUsername">
+                                    <i class="fa-solid fa-user"></i>
+                                </label>
+                                <input type="text" name="" id="signupUsername" class="inputFields" placeholder="Username">
+                            </div>
+                            <div class="inputs">
+                                <label for="signupEmail">
+                                    <i class="fa-solid fa-at"></i>
+                                </label>
+                                <input type="email" name="" id="signupEmail" class="inputFields" placeholder="Email">
+                            </div>
+                            <div class="inputs">
+                                <label for="signupPassword">
+                                    <i class="fa-solid fa-unlock"></i>
+                                </label>
+                                <input type="password" name="" id="signupPassword" class="inputFields" placeholder="Password">
+                            </div>
+                            <div class="inputs">
+                                <label for="signupConfirmPassword">
+                                    <i class="fa-solid fa-unlock"></i>
+                                </label>
+                                <input type="password" name="" id="signupConfirmPassword" class="inputFields" placeholder="Confirm Password">
+                            </div>
+                            <div class="sub-Btns">
+                                <button class="form-sub-btn">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                    Sign up
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

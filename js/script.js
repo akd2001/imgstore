@@ -49,3 +49,22 @@ mediaOne.addListener(handleTabletChange);
 mediaTwo.addListener(handleMobileChange);
 handleTabletChange(mediaOne);   
 handleMobileChange(mediaTwo);   
+
+// popup open and close 
+
+let popup = document.getElementById("formSection");
+
+// openpopup
+
+let openpopBtn = document.getElementById('openpopBtn');
+openpopBtn.onclick = ()=> {
+    popup.style.display = "flex";
+}
+
+// closepopup
+
+let closepopBtn = document.getElementById("closeForm");
+
+closepopBtn.onclick = ()=> {
+    popup.style.display = "none";
+}
