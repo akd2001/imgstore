@@ -22,18 +22,24 @@
 }
 
 @media only screen and (max-width: 1200px) {
-    openPopup {
+    #openPopup button {
         width: 12vw;
     }
+
+    #openPopup button:hover {
+        width: 14vw;
+    }
+
+
 }
 
 @media only screen and (max-width: 1070px) {
-    
+
     .social-icon {
         width: 54%;
     }
 
-    .social-icon i{
+    .social-icon i {
         width: 3.8vw;
     }
 
@@ -45,12 +51,27 @@
         width: 93%;
     }
 
+    #openPopup button {
+        width: 15vw;
+        font-size: 1.4rem;
+    }
+
+    #openPopup button:hover {
+        width: 17vw;
+    }
 }
 
 @media only screen and (max-width: 980px) {
-  
 
-    .social-icon i{
+    #openPopup button {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+
+
+    .social-icon i {
         width: 4.1vw;
     }
 
@@ -178,12 +199,12 @@
         width: 5.4vw;
         color: var(--themeBgColor);
     }
-    
+
     .social-icon i {
         width: 5.4vw;
         color: var(--themeBgColor);
     }
-    
+
     #closeForm {
         z-index: 1;
         font-size: 4.2rem;
@@ -207,6 +228,16 @@
         width: 6.9vw;
     }
 
+    #openPopup button {
+        width: 22vw;
+        font-size: 1.5rem;
+    }
+
+    #openPopup button:hover {
+        width: 24vw;
+    }
+
+
     #loginForm {
         width: 80%;
     }
@@ -224,6 +255,10 @@
 
     html {
         font-size: 62%;
+    }
+
+    #closeForm {
+        right: 4%;
     }
 
     #navbar {
@@ -330,7 +365,7 @@
     .form-sub-btn {
         font-size: 1.5rem;
     }
-    
+
     .inputs {
         padding: 4% 4%;
         border-radius: 4vw;
@@ -347,9 +382,9 @@
 }
 
 @media only screen and (max-width: 541px) {
-    
+
     .social-icon i {
-        width: 7.9vw;
+        width: 8.2vw;
     }
 
     #formToggleBtn button label {
@@ -360,12 +395,27 @@
         height: 76%;
     }
 
+    #openPopup button {
+        width: 30vw;
+        border-top-left-radius: 3rem;
+        border-bottom-left-radius: 3rem;
+    }
+
+    #openPopup button:hover {
+        width: 32vw;
+    }
+
+    #toggleSwitch {
+        border-radius: 5rem;
+    }
+
 }
 
 @media only screen and (max-width: 454px) {
     #loginForm {
         width: 95%;
     }
+
     #signupForm {
         width: 95%;
     }
@@ -386,7 +436,7 @@
 }
 
 @media only screen and (max-width: 408px) {
-    
+
     #toggleSwitch {
         border-radius: 4rem;
     }
@@ -399,12 +449,12 @@
         font-size: 4.1vw;
     }
 
-    #formToggleBtn  {
+    #formToggleBtn {
         width: 77%;
     }
 
     .social-icon i {
-        width: 11.9vw;
+        width: 10.9vw;
         font-size: 2.2rem;
     }
 
@@ -415,6 +465,7 @@
     #loginForm {
         width: 100%;
     }
+
     #signupForm {
         width: 100%;
     }
