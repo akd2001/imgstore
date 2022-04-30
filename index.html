@@ -19,7 +19,12 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-
+    <style>
+        #signupUsername,
+        #signupEmail {
+            background-color: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -82,7 +87,7 @@
 
                 <input type="radio" name="toggleForm" id="loginTgl" class="toggleForm" checked>
                 <input type="radio" name="toggleForm" id="signupTgl" class="toggleForm">
-                
+
                 <div id="formToggleBtn">
                     <div id="toggleSwitch"></div>
                     <button>
@@ -115,15 +120,17 @@
                         <form action="" id="loginForm">
                             <div class="inputs">
                                 <label for="loginUsername">
-                                    <i class="fa-solid fa-user"></i>
+                                    <i class="fa-solid fa-user" id="login-user-name-icon"></i>
                                 </label>
-                                <input type="text" name="" id="loginUsername" class="inputFields" placeholder="Username" autocomplete>
+                                <input type="text" name="" id="loginUsername" class="inputFields" placeholder="Username"
+                                    autocomplete>
                             </div>
                             <div class="inputs">
                                 <label for="loginPassword">
-                                    <i class="fa-solid fa-unlock"></i>
+                                    <i class="fa-solid fa-unlock" id="login-user-passwd-icon"></i>
                                 </label>
-                                <input type="password" name="" id="loginPassword" class="inputFields" placeholder="Password" autocomplete>
+                                <input type="password" name="" id="loginPassword" class="inputFields"
+                                    placeholder="Password" autocomplete>
                             </div>
                             <div class="sub-Btns">
                                 <button class="form-sub-btn">
@@ -140,30 +147,34 @@
                         <div class="formHead">
                             <p>Get Start</p>
                         </div>
-                        <form action="" id="signupForm">
+                        <form action="" id="signupForm" name="signupForm">
                             <div class="inputs">
                                 <label for="signupUsername">
-                                    <i class="fa-solid fa-user"></i>
+                                    <i class="fa-solid fa-user" id="signup-user-name-icon"></i>
                                 </label>
-                                <input type="text" name="" id="signupUsername" class="inputFields" placeholder="Username" autocomplete>
+                                <input type="text" name="" id="signupUsername" class="inputFields"
+                                    placeholder="Username" autocomplete>
                             </div>
                             <div class="inputs">
                                 <label for="signupEmail">
-                                    <i class="fa-solid fa-at"></i>
+                                    <i class="fa-solid fa-at" id="signup-user-email-icon"></i>
                                 </label>
-                                <input type="email" name="" id="signupEmail" class="inputFields" placeholder="Email" autocomplete>
+                                <input type="email" name="" id="signupEmail" class="inputFields" placeholder="Email"
+                                    autocomplete>
                             </div>
                             <div class="inputs">
                                 <label for="signupPassword">
-                                    <i class="fa-solid fa-unlock"></i>
+                                    <i class="fa-solid fa-unlock" id="signup-user-set-passwd-icon"></i>
                                 </label>
-                                <input type="password" name="" id="signupPassword" class="inputFields" placeholder="Password" autocomplete>
+                                <input type="password" name="" id="signupPassword" class="inputFields"
+                                    placeholder="Password" autocomplete>
                             </div>
                             <div class="inputs">
                                 <label for="signupConfirmPassword">
-                                    <i class="fa-solid fa-unlock"></i>
+                                    <i class="fa-solid fa-unlock" id="signup-user-confirm-passed-icon"></i>
                                 </label>
-                                <input type="password" name="" id="signupConfirmPassword" class="inputFields" placeholder="Confirm Password" autocomplete>
+                                <input type="password" name="" id="signupConfirmPassword" class="inputFields"
+                                    placeholder="Confirm Password" autocomplete>
                             </div>
                             <div class="sub-Btns">
                                 <button class="form-sub-btn">
