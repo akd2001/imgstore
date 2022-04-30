@@ -42,7 +42,7 @@ body {
 /* header section */
 
 header {
-    height: 9vh;
+    height: 71.91px;
     background-color: var(--themeBgColor);
     display: flex;
     padding: 0% 1%;
@@ -90,7 +90,7 @@ header {
     list-style: none;
     width: 8vw;
     position: relative;
-    height: 6vh;
+    height: 47.94px;
     display: flex;
     justify-content: center;
     align-items: center;
