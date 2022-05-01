@@ -26,7 +26,7 @@
     position: absolute;
     right: 0;
     top: 12%;
-    height: 6vh;
+    height: 47.94px;
     width: auto;
 }
 
@@ -103,7 +103,7 @@
 }
 
 #formToggleBtn button label {
-    font-size: 2vw;
+    font-size: 1.8vw;
     font-weight: bold;
     cursor: pointer;
 }

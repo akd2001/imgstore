@@ -24,15 +24,33 @@ validate(document.getElementById("signupEmail"), /^([a-zA-Z0-9\.\-]+)@gmail\.com
 
 
 //navbar active class
-let li = document.querySelectorAll('li');
-li.forEach(element => {
-    element.onclick = () => {
-        li.forEach(element => {
-            element.classList.remove('active');
-        })
-        element.classList.add('active');
-    };
-})
+// let li = document.querySelectorAll('li');
+// li.forEach(element => {
+//     element.onclick = () => {
+//         li.forEach(element => {
+//             element.classList.remove('active');
+//         })
+//         element.classList.add('active');
+//     };
+// })
+
+//navbar active class and tabs
+
+function navTabs(evt, cityName) {
+    let i, tabs, links;
+    tabs = document.getElementsByClassName("tabs");
+    links = document.getElementsByClassName("links");
+
+    for (i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+    }
+    for (i = 0; i < links.length; i++) {
+        links[i].className = links[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "flex";
+    evt.currentTarget.className += " active";
+}
+
 
 //media query target
 

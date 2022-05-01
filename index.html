@@ -43,21 +43,21 @@
         </label>
         <nav id="navbar">
             <ul>
-                <li class="active">
+                <li id="homeBtn" class="links active" onclick="navTabs(event, 'home')">
                     <i class="fa-solid fa-house-chimney"></i>
                     <a href="#home" class="navBtn"><span>Home</span></a>
                 </li>
 
-                <li>
+                <li id="imagesBtn" class="links" onclick="navTabs(event, 'images')">
                     <i class="fa-solid fa-image"></i>
                     <a href="#images" class="navBtn"><span>Images</span></a>
                 </li>
 
-                <li id="helpBtn">
+                <li id="helpBtn" class="links" onclick="navTabs(event, 'help')">
                     <i class="fa-solid fa-envelope"></i>
                     <a href="#help" class="navBtn"><span>Help</span></a>
                 </li>
-                <li>
+                <li id="aboutBtn" class="links" onclick="navTabs(event, 'about')">
                     <i class="fa-solid fa-file"></i>
                     <a href="#about" class="navBtn"><span>About</span></a>
                 </li>
@@ -70,6 +70,19 @@
             </button>
         </div>
     </header>
+    <!-- tab sections -->
+    <section id="home" class="tabs">
+        <h1>Home</h1>
+    </section>
+    <section id="images" class="tabs">
+        <h1>Images</h1>
+    </section>
+    <section id="help" class="tabs">
+        <h1>Help</h1>
+    </section>
+    <section id="about" class="tabs">
+        <h1>About</h1>
+    </section>
 
     <div id="openPopup">
         <button id="openpopBtn">Login / Sign Up</button>
