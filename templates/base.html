@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/19fb5e3787.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href={{ url_for('static', filename="css/style.css" ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename="css/form.css" ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename="css/media.css" ) }}>
+    <link rel="shortcut icon" href={{ url_for('static', filename="img/icon.png" ) }} type="image/x-icon">
+    <title>{% block title %}{% endblock %}</title>
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    {% block body %}{% endblock %}
+</body>
+
+</html>
