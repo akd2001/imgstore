@@ -23,37 +23,22 @@ validate(document.getElementById('signupUsername'), /^[A-Za-z]([a-zA-Z0-9\s+]){4
 validate(document.getElementById("signupEmail"), /^([a-zA-Z0-9\.\-]+)@gmail\.com$/, document.getElementById("signup-user-email-icon"));
 
 
-//navbar active class
-// let li = document.querySelectorAll('li');
-// li.forEach(element => {
-//     element.onclick = () => {
-//         li.forEach(element => {
-//             element.classList.remove('active');
-//         })
-//         element.classList.add('active');
-//     };
-// })
-
-//navbar active class and tabs
-
-function navTabs(evt, cityName) {
-    let i, tabs, links;
-    tabs = document.getElementsByClassName("tabs");
-    links = document.getElementsByClassName("links");
-
-    for (i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "none";
-    }
-    for (i = 0; i < links.length; i++) {
-        links[i].className = links[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "flex";
-    evt.currentTarget.className += " active";
-}
-
+// navbar active class and tabs
+let buttons = document.querySelectorAll('li');
+let allSections = document.querySelectorAll('.tabs');
+function tabs(index,navBtn) {
+    allSections.forEach(element => element.style.display = "none");
+    buttons.forEach(element => element.classList.remove('active'));
+    navBtn.classList.add('active');
+    allSections[index].style.display = "flex";
+    // document.getElementById("menuBarToggleCheck").checked = true;
+};
+document.getElementById("homeBtn").onclick = ()=> {tabs(0,document.getElementById("homeBtn"))};
+document.getElementById("imagesBtn").onclick = ()=> tabs(1,document.getElementById("imagesBtn"));
+document.getElementById("helpBtn").onclick = ()=> tabs(2,document.getElementById("helpBtn"));
+document.getElementById("aboutBtn").onclick = ()=> tabs(3,document.getElementById("aboutBtn"));
 
 //media query target
-
 const mediaOne = window.matchMedia('(max-width: 900px)');
 const mediaTwo = window.matchMedia('(max-width: 600px)');
 
