@@ -5,204 +5,190 @@
 *    © ARNAB KUMAR DAS    © electroarnab2001@gmail.com    https://github.com/akd2001
 */
 -->
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
-    <script src="https://kit.fontawesome.com/19fb5e3787.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/form.css">
-    <link rel="stylesheet" href="css/media.css">
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-    <style>
-        #signupUsername,
-        #signupEmail {
-            background-color: none;
-        }
-    </style>
-</head>
-
-<body>
-    <noscript>Sorry You need to enable Javascript on your browser</noscript>
-    <input type="checkbox" id="menuBarToggle">
-    <!-- header and navbar -->
-    <header id="head" class="head">
-        <div id="logo">
-            <h1>Emag<span>i</span>fy</h1>
-        </div>
-
-        <label for="menuBarToggle" id="menuBarToggleCheck">
-            <div class="barStyle top"></div>
-            <div class="barStyle middle"></div>
-            <div class="barStyle bottom"></div>
-        </label>
-        <nav id="navbar">
-            <ul>
-                <li id="homeBtn" class="links active" onclick="navTabs(event, 'home')">
-                    <i class="fa-solid fa-house-chimney"></i>
-                    <a href="#home" class="navBtn"><span>Home</span></a>
-                </li>
-
-                <li id="imagesBtn" class="links" onclick="navTabs(event, 'images')">
-                    <i class="fa-solid fa-image"></i>
-                    <a href="#images" class="navBtn"><span>Images</span></a>
-                </li>
-
-                <li id="helpBtn" class="links" onclick="navTabs(event, 'help')">
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="#help" class="navBtn"><span>Help</span></a>
-                </li>
-                <li id="aboutBtn" class="links" onclick="navTabs(event, 'about')">
-                    <i class="fa-solid fa-file"></i>
-                    <a href="#about" class="navBtn"><span>About</span></a>
-                </li>
-            </ul>
-        </nav>
-        <div id="button">
-            <button id="uploadBtn">
-                <i class="fa-solid fa-upload"></i>
-                <span>Upload</span>
-            </button>
-        </div>
-    </header>
-    <!-- tab sections -->
-    <section id="home" class="tabs">
-        <h1>Home</h1>
-    </section>
-    <section id="images" class="tabs">
-        <h1>Images</h1>
-    </section>
-    <section id="help" class="tabs">
-        <h1>Help</h1>
-    </section>
-    <section id="about" class="tabs">
-        <h1>About</h1>
-    </section>
-
-    <div id="openPopup">
-        <button id="openpopBtn">Login / Sign Up</button>
+{% extends 'base.html' %}
+{% block title %}Image Gallery{% endblock %}
+{% block head %}
+<style>
+    #signupUsername,
+    #signupEmail {
+        background-color: none;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<noscript>Sorry You need to enable Javascript on your browser</noscript>
+<input type="checkbox" id="menuBarToggle">
+<!-- header and navbar -->
+<header id="head" class="head">
+    <div id="logo">
+        <h1>Emag<span>i</span>fy</h1>
     </div>
 
-    <!-- signup and login popup form -->
+    <label for="menuBarToggle" id="menuBarToggleCheck">
+        <div class="barStyle top"></div>
+        <div class="barStyle middle"></div>
+        <div class="barStyle bottom"></div>
+    </label>
+    <nav id="navbar">
+        <ul>
+            <li id="homeBtn" class="links active" onclick="navTabs(event, 'home')">
+                <i class="fa-solid fa-house-chimney"></i>
+                <a href="#home" class="navBtn"><span>Home</span></a>
+            </li>
 
-    <div id="formSection">
-        <div id="mainCard">
-            <div id="closeForm">+</div>
-            <div id="image">
+            <li id="imagesBtn" class="links" onclick="navTabs(event, 'images')">
+                <i class="fa-solid fa-image"></i>
+                <a href="#images" class="navBtn"><span>Images</span></a>
+            </li>
 
+            <li id="helpBtn" class="links" onclick="navTabs(event, 'help')">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="#help" class="navBtn"><span>Help</span></a>
+            </li>
+            <li id="aboutBtn" class="links" onclick="navTabs(event, 'about')">
+                <i class="fa-solid fa-file"></i>
+                <a href="#about" class="navBtn"><span>About</span></a>
+            </li>
+        </ul>
+    </nav>
+    <div id="button">
+        <button id="uploadBtn">
+            <i class="fa-solid fa-upload"></i>
+            <span>Upload</span>
+        </button>
+    </div>
+</header>
+<!-- tab sections -->
+<section id="home" class="tabs">
+    <h1>Home</h1>
+</section>
+<section id="images" class="tabs">
+    <h1>Images</h1>
+</section>
+<section id="help" class="tabs">
+    <h1>Help</h1>
+</section>
+<section id="about" class="tabs">
+    <h1>About</h1>
+</section>
+
+<div id="openPopup">
+    <button id="openpopBtn">Login / Sign Up</button>
+</div>
+
+<!-- signup and login popup form -->
+
+<div id="formSection">
+    <div id="mainCard">
+        <div id="closeForm">+</div>
+        <div id="image">
+
+        </div>
+        <div id="forms">
+
+            <input type="radio" name="toggleForm" id="loginTgl" class="toggleForm" checked>
+            <input type="radio" name="toggleForm" id="signupTgl" class="toggleForm">
+
+            <div id="formToggleBtn">
+                <div id="toggleSwitch"></div>
+                <button>
+                    <label for="loginTgl">
+                        <p>Login</p>
+                    </label>
+                </button>
+                <button>
+                    <label for="signupTgl">
+                        <p>Sign up</p>
+                    </label>
+                </button>
             </div>
-            <div id="forms">
 
-                <input type="radio" name="toggleForm" id="loginTgl" class="toggleForm" checked>
-                <input type="radio" name="toggleForm" id="signupTgl" class="toggleForm">
+            <!-- flip card of form  -->
 
-                <div id="formToggleBtn">
-                    <div id="toggleSwitch"></div>
-                    <button>
-                        <label for="loginTgl">
-                            <p>Login</p>
-                        </label>
-                    </button>
-                    <button>
-                        <label for="signupTgl">
-                            <p>Sign up</p>
-                        </label>
-                    </button>
+            <div id="flipForm">
+
+                <!-- front of form or login  -->
+
+                <div id="frontcard">
+                    <div class="formHead">
+                        <p>Good to see you again</p>
+                    </div>
+                    <div class="social-icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <form action="" id="loginForm" method="POST">
+                        <div class="inputs">
+                            <label for="loginUsername">
+                                <i class="fa-solid fa-user" id="login-user-name-icon"></i>
+                            </label>
+                            <input type="text" name="uname" id="loginUsername" class="inputFields"
+                                placeholder="Username" autocomplete>
+                        </div>
+                        <div class="inputs">
+                            <label for="loginPassword">
+                                <i class="fa-solid fa-unlock" id="login-user-passwd-icon"></i>
+                            </label>
+                            <input type="password" name="" id="loginPassword" class="inputFields" placeholder="Password"
+                                autocomplete>
+                        </div>
+                        <div class="sub-Btns">
+                            <button class="form-sub-btn">
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                                Login
+                            </button>
+                        </div>
+                    </form>
                 </div>
 
-                <!-- flip card of form  -->
+                <!-- back of form or sign up -->
 
-                <div id="flipForm">
-
-                    <!-- front of form or login  -->
-
-                    <div id="frontcard">
-                        <div class="formHead">
-                            <p>Good to see you again</p>
-                        </div>
-                        <div class="social-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-linkedin-in"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                        </div>
-                        <form action="" id="loginForm">
-                            <div class="inputs">
-                                <label for="loginUsername">
-                                    <i class="fa-solid fa-user" id="login-user-name-icon"></i>
-                                </label>
-                                <input type="text" name="" id="loginUsername" class="inputFields" placeholder="Username"
-                                    autocomplete>
-                            </div>
-                            <div class="inputs">
-                                <label for="loginPassword">
-                                    <i class="fa-solid fa-unlock" id="login-user-passwd-icon"></i>
-                                </label>
-                                <input type="password" name="" id="loginPassword" class="inputFields"
-                                    placeholder="Password" autocomplete>
-                            </div>
-                            <div class="sub-Btns">
-                                <button class="form-sub-btn">
-                                    <i class="fa-solid fa-right-to-bracket"></i>
-                                    Login
-                                </button>
-                            </div>
-                        </form>
+                <div id="backcard">
+                    <div class="formHead">
+                        <p>Get Start</p>
                     </div>
-
-                    <!-- back of form or sign up -->
-
-                    <div id="backcard">
-                        <div class="formHead">
-                            <p>Get Start</p>
+                    <form action="" id="signupForm" name="signupForm">
+                        <div class="inputs">
+                            <label for="signupUsername">
+                                <i class="fa-solid fa-user" id="signup-user-name-icon"></i>
+                            </label>
+                            <input type="text" name="" id="signupUsername" class="inputFields" placeholder="Username"
+                                autocomplete>
                         </div>
-                        <form action="" id="signupForm" name="signupForm">
-                            <div class="inputs">
-                                <label for="signupUsername">
-                                    <i class="fa-solid fa-user" id="signup-user-name-icon"></i>
-                                </label>
-                                <input type="text" name="" id="signupUsername" class="inputFields"
-                                    placeholder="Username" autocomplete>
-                            </div>
-                            <div class="inputs">
-                                <label for="signupEmail">
-                                    <i class="fa-solid fa-at" id="signup-user-email-icon"></i>
-                                </label>
-                                <input type="email" name="" id="signupEmail" class="inputFields" placeholder="Email"
-                                    autocomplete>
-                            </div>
-                            <div class="inputs">
-                                <label for="signupPassword">
-                                    <i class="fa-solid fa-unlock" id="signup-user-set-passwd-icon"></i>
-                                </label>
-                                <input type="password" name="" id="signupPassword" class="inputFields"
-                                    placeholder="Password" autocomplete>
-                            </div>
-                            <div class="inputs">
-                                <label for="signupConfirmPassword">
-                                    <i class="fa-solid fa-unlock" id="signup-user-confirm-passed-icon"></i>
-                                </label>
-                                <input type="password" name="" id="signupConfirmPassword" class="inputFields"
-                                    placeholder="Confirm Password" autocomplete>
-                            </div>
-                            <div class="sub-Btns">
-                                <button class="form-sub-btn">
-                                    <i class="fa-solid fa-user-plus"></i>
-                                    Sign up
-                                </button>
-                            </div>
-                        </form>
-                    </div>
+                        <div class="inputs">
+                            <label for="signupEmail">
+                                <i class="fa-solid fa-at" id="signup-user-email-icon"></i>
+                            </label>
+                            <input type="email" name="" id="signupEmail" class="inputFields" placeholder="Email"
+                                autocomplete>
+                        </div>
+                        <div class="inputs">
+                            <label for="signupPassword">
+                                <i class="fa-solid fa-unlock" id="signup-user-set-passwd-icon"></i>
+                            </label>
+                            <input type="password" name="" id="signupPassword" class="inputFields"
+                                placeholder="Password" autocomplete>
+                        </div>
+                        <div class="inputs">
+                            <label for="signupConfirmPassword">
+                                <i class="fa-solid fa-unlock" id="signup-user-confirm-passed-icon"></i>
+                            </label>
+                            <input type="password" name="" id="signupConfirmPassword" class="inputFields"
+                                placeholder="Confirm Password" autocomplete>
+                        </div>
+                        <div class="sub-Btns">
+                            <button class="form-sub-btn">
+                                <i class="fa-solid fa-user-plus"></i>
+                                Sign up
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <script src="js/script.js" defer></script>
-</body>
-
-</html>
+<script src={{ url_for('static', filename="js/script.js" ) }} defer></script>
+{% endblock %}
