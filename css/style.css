@@ -71,6 +71,7 @@ header {
 
 
 #navbar {
+    margin-left: 8%;
     display: flex;
     z-index: 1;
     width: 50%;
@@ -165,7 +166,7 @@ header {
 
 #navbar ul li.active {
     background-color: var(--themeColor);
-    filter: drop-shadow(0 .40rem 0.2rem var(--textColor));
+    
 }
 
 #navbar ul li.active a,
@@ -189,17 +190,18 @@ header {
 }
 
 #button {
-    width: 9vw;
+    width: auto;
     height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#uploadBtn {
-    width: 90%;
+.btn-nav-all {
+    margin: 2px;
+    width: 6.5vw;
     height: 80%;
-    background-color: var(--themeColor);
+    background-color: var(--textColor);
     border: none;
     color: var(--themeBgColor);
     font-size: 1rem;
@@ -209,15 +211,14 @@ header {
     border-radius: .6rem;
 }
 
-#uploadBtn:hover {
+.btn-nav-all:hover {
     filter: drop-shadow(0 .40rem 0.2rem grey);
-    background-color: var(--textColor);
+    background-color: var(--themeColor);
 }
 
 
 .tabs {
     position: absolute;
-    height: 727.09px;
     width: 100%;
     display: none;
     justify-content: center;

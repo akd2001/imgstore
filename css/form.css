@@ -22,36 +22,6 @@
     filter: drop-shadow(24px 21px 22px rgb(156, 146, 146));
 }
 
-#openPopup {
-    position: absolute;
-    right: 0;
-    top: 12%;
-    height: 47.94px;
-    width: auto;
-}
-
-#openPopup button {
-    font-weight: bold;
-    color: var(--textColor);
-    font-size: 1rem;
-    cursor: pointer;
-    height: 100%;
-    background-color: transparent;
-    border: 2px solid var(--themeColor);
-    width: 9vw;
-    border-right: none;
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-    transition: all .3s linear;
-}
-
-#openPopup button:hover {
-    background-color: var(--textColor);
-    color: var(--themeBgColor);
-    border: none;
-    width: 10vw;
-}
-
 #closeForm {
     position: absolute;
     right: 2%;

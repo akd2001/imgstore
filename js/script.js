@@ -26,23 +26,25 @@ validate(document.getElementById("signupEmail"), /^([a-zA-Z0-9\.\-]+)@gmail\.com
 // navbar active class and tabs
 let buttons = document.querySelectorAll('li');
 let allSections = document.querySelectorAll('.tabs');
-function tabs(index,navBtn) {
+function tabs(index, navBtn) {
     allSections.forEach(element => element.style.display = "none");
     buttons.forEach(element => element.classList.remove('active'));
     navBtn.classList.add('active');
     allSections[index].style.display = "flex";
     // document.getElementById("menuBarToggleCheck").checked = true;
 };
-document.getElementById("homeBtn").onclick = ()=> {tabs(0,document.getElementById("homeBtn"))};
-document.getElementById("imagesBtn").onclick = ()=> tabs(1,document.getElementById("imagesBtn"));
-document.getElementById("helpBtn").onclick = ()=> tabs(2,document.getElementById("helpBtn"));
-document.getElementById("aboutBtn").onclick = ()=> tabs(3,document.getElementById("aboutBtn"));
+document.getElementById("homeBtn").onclick = () => { tabs(0, document.getElementById("homeBtn")) };
+document.getElementById("imagesBtn").onclick = () => tabs(1, document.getElementById("imagesBtn"));
+document.getElementById("helpBtn").onclick = () => tabs(2, document.getElementById("helpBtn"));
+document.getElementById("aboutBtn").onclick = () => tabs(3, document.getElementById("aboutBtn"));
 
 //media query target
 const mediaOne = window.matchMedia('(max-width: 900px)');
 const mediaTwo = window.matchMedia('(max-width: 600px)');
 
 let uploadBtn = document.querySelector('#button');
+let header = document.getElementById('head');
+let openpopBtn = document.getElementById('openpopBtn');
 let navBar = document.querySelector("#navbar ul");
 let helpBtn = document.getElementById("helpBtn");
 
@@ -57,9 +59,11 @@ function handleTabletChange(e) {
 function handleMobileChange(e) {
     if (e.matches) {
         navBar.insertBefore(uploadBtn, helpBtn);
+        header.appendChild(openpopBtn);
     } else {
         mediaOne.addListener(handleTabletChange);
         handleTabletChange(mediaOne);
+        uploadBtn.appendChild(openpopBtn);
     }
 }
 mediaOne.addListener(handleTabletChange);
@@ -70,7 +74,6 @@ handleMobileChange(mediaTwo);
 // popup open and close 
 let popup = document.getElementById("formSection");
 // openpopup
-let openpopBtn = document.getElementById('openpopBtn');
 openpopBtn.onclick = () => {
     popup.style.display = "flex";
 }
@@ -84,30 +87,34 @@ closepopBtn.onclick = () => {
 let silderItems = document.querySelectorAll(".items");
 let leftBtn = document.getElementById("slide-switch-left");
 let rightBtn = document.getElementById("slide-switch-right");
+let allSlideBtn = document.getElementsByClassName("slideSwitch");
 let slideLength = silderItems.length;
 let count = 0;
-
-leftBtn.onclick = ()=> slide("previous");
-rightBtn.onclick = ()=> slide("next");
-
-function slide(direction){
-    if(direction == "next") {
-        count++;
-        if(count == slideLength-1) {
-            rightBtn.disabled = true;
-            leftBtn.disabled = false;
-        }
-    }else {
-        count--;
-        if(count == 0) {
-            rightBtn.disabled = false;
-            leftBtn.disabled = true;
-        }
+checkCountValue();
+//create function for check value of count
+function checkCountValue() {
+    if (count == 0) {
+        leftBtn.disabled = true;
+    } else if (count == slideLength - 1) {
+        rightBtn.disabled = true;
+    } else {
+        leftBtn.disabled = false;
+        rightBtn.disabled = false;
     }
-
+}
+// call slide function by click
+leftBtn.onclick = () => slide("previous");
+rightBtn.onclick = () => slide("next");
+//slide function
+function slide(direction) {
+    if (direction == "next") {
+        count++;
+    } else {
+        count--;
+    }
+    checkCountValue();
     for (const x of silderItems) {
         x.classList.remove("active");
     }
-    console.log(count);  
     silderItems[count].classList.add("active");
 }
