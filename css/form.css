@@ -118,7 +118,7 @@
 
 #toggleSwitch {
     position: absolute;
-    height: 6vh;
+    height: 6.5vh;
     width: 50%;
     left: 0;
     background-color: var(--themeColor);

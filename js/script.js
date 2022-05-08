@@ -54,7 +54,6 @@ function handleTabletChange(e) {
         header.appendChild(uploadBtn);
     }
 }
-
 function handleMobileChange(e) {
     if (e.matches) {
         navBar.insertBefore(uploadBtn, helpBtn);
@@ -69,20 +68,44 @@ handleTabletChange(mediaOne);
 handleMobileChange(mediaTwo);
 
 // popup open and close 
-
 let popup = document.getElementById("formSection");
-
 // openpopup
-
 let openpopBtn = document.getElementById('openpopBtn');
 openpopBtn.onclick = () => {
     popup.style.display = "flex";
 }
-
 // closepopup
-
 let closepopBtn = document.getElementById("closeForm");
-
 closepopBtn.onclick = () => {
     popup.style.display = "none";
+}
+
+//image slider function
+let silderItems = document.querySelectorAll(".items");
+let leftBtn = document.getElementById("slide-switch-left");
+let rightBtn = document.getElementById("slide-switch-right");
+let slideLength = silderItems.length;
+let count = 0;
+
+leftBtn.onclick = slide("previous");
+rightBtn.onclick = slide("next");
+
+function slide(direction){
+    if(direction == "next") {
+        count++;
+        if(count == slideLength) {
+            count = 0;
+        }
+    }else {
+        if(count == 0) {
+            count = slideLength;
+        } else {
+            count--;
+        }
+    }
+    for (const x of silderItems) {
+        x.classList.remove("active");
+    }
+    console.log(count);  
+    silderItems[count].classList.add("active");
 }

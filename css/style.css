@@ -72,6 +72,7 @@ header {
 
 #navbar {
     display: flex;
+    z-index: 1;
     width: 50%;
     height: 100%;
     justify-content: space-evenly;
@@ -215,16 +216,13 @@ header {
 
 
 .tabs {
-    z-index: -1;
     position: absolute;
-    height: 500.09px;
+    height: 727.09px;
     width: 100%;
     display: none;
     justify-content: center;
     align-items: center;
 }
-#home {
-    display: flex;
-}
+
 
 
