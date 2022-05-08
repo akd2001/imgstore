@@ -87,22 +87,24 @@ let rightBtn = document.getElementById("slide-switch-right");
 let slideLength = silderItems.length;
 let count = 0;
 
-leftBtn.onclick = slide("previous");
-rightBtn.onclick = slide("next");
+leftBtn.onclick = ()=> slide("previous");
+rightBtn.onclick = ()=> slide("next");
 
 function slide(direction){
     if(direction == "next") {
         count++;
-        if(count == slideLength) {
-            count = 0;
+        if(count == slideLength-1) {
+            rightBtn.disabled = true;
+            leftBtn.disabled = false;
         }
     }else {
+        count--;
         if(count == 0) {
-            count = slideLength;
-        } else {
-            count--;
+            rightBtn.disabled = false;
+            leftBtn.disabled = true;
         }
     }
+
     for (const x of silderItems) {
         x.classList.remove("active");
     }
