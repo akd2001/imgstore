@@ -1,12 +1,13 @@
 #home {
     display: flex;
-    height: 90vh;
+    height: 91vh;
 }
 
 #silder {
-    height: 75vh;
+    height: auto;
     width: auto;
-    border: 10px double var(--textColor);
+    border: 10px solid var(--textColor);
+    filter: drop-shadow(3px 3px 10px #34373b);
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -16,6 +17,7 @@
     height: 100%;
     display: none;
     justify-content: center;
+    transition: all .5s ease-in;
 }
 
 .items.active {
@@ -23,6 +25,7 @@
 }
 
 .items img{
+    max-height: 75vh;
     height: auto;
     width: 100%;
 }

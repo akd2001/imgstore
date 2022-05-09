@@ -412,14 +412,12 @@
     }
 
     #home {
-        height: 70vh;
+        height: 73vh;
     }
 
     .slideSwitch {
-        width: 15vw;
-        bottom: 2%;
+        width: 8.3vw;
     }
-
 }
 
 @media only screen and (max-width: 541px) {
@@ -469,6 +467,9 @@
         height: 40px;
         width: 21%;
         border-radius: .8rem;
+    }
+    .sliderSwitch {
+        font-size: large;
     }
 }
 

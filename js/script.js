@@ -38,6 +38,44 @@ document.getElementById("imagesBtn").onclick = () => tabs(1, document.getElement
 document.getElementById("helpBtn").onclick = () => tabs(2, document.getElementById("helpBtn"));
 document.getElementById("aboutBtn").onclick = () => tabs(3, document.getElementById("aboutBtn"));
 
+
+
+//image slider function
+let silderItems = document.querySelectorAll(".items");
+let leftBtn = document.getElementById("slide-switch-left");
+let rightBtn = document.getElementById("slide-switch-right");
+let allSlideBtn = document.getElementsByClassName("slideSwitch");
+let slideLength = silderItems.length;
+let count = 0;
+checkCountValue();
+//create function for check value of count
+function checkCountValue() {
+    if (count == 0) {
+        leftBtn.disabled = true;
+    } else if (count == slideLength - 1) {
+        rightBtn.disabled = true;
+    } else {
+        leftBtn.disabled = false;
+        rightBtn.disabled = false;
+    }
+}
+// call slide function by click
+leftBtn.onclick = () => slide("previous");
+rightBtn.onclick = () => slide("next");
+//slide function
+function slide(direction) {
+    if (direction == "next") {
+        count++;
+    } else {
+        count--;
+    }
+    checkCountValue();
+    for (const x of silderItems) {
+        x.classList.remove("active");
+    }
+    silderItems[count].classList.add("active");
+}
+
 //media query target
 const mediaOne = window.matchMedia('(max-width: 900px)');
 const mediaTwo = window.matchMedia('(max-width: 600px)');
@@ -60,6 +98,25 @@ function handleMobileChange(e) {
     if (e.matches) {
         navBar.insertBefore(uploadBtn, helpBtn);
         header.appendChild(openpopBtn);
+        // let imageSliderArea = document.getElementById("slider");
+        // let startX, moveX;
+        // function touchStart(e) {
+        //     startX = e.touches[0].clientX;
+        // }
+        // function touchMove(e) {
+        //     moveX = e.touches[0].clientX;
+        // }
+        // function touchEnd() {
+        //     if (startX + 100 < moveX) {
+        //         slide("prev");
+        //     } else if (startX - 100 > moveX) {
+        //         slide("next");
+        //     }
+        // }
+        // document.body.ontouchstart = (e) => touchStart(e);
+        // document.body.ontouchmove = (e) => touchMove(e);
+        // document.body.ontouchend = () => touchEnd();
+
     } else {
         mediaOne.addListener(handleTabletChange);
         handleTabletChange(mediaOne);
@@ -81,40 +138,4 @@ openpopBtn.onclick = () => {
 let closepopBtn = document.getElementById("closeForm");
 closepopBtn.onclick = () => {
     popup.style.display = "none";
-}
-
-//image slider function
-let silderItems = document.querySelectorAll(".items");
-let leftBtn = document.getElementById("slide-switch-left");
-let rightBtn = document.getElementById("slide-switch-right");
-let allSlideBtn = document.getElementsByClassName("slideSwitch");
-let slideLength = silderItems.length;
-let count = 0;
-checkCountValue();
-//create function for check value of count
-function checkCountValue() {
-    if (count == 0) {
-        leftBtn.disabled = true;
-    } else if (count == slideLength-1) {
-        rightBtn.disabled = true;
-    } else {
-        leftBtn.disabled = false;
-        rightBtn.disabled = false;
-    }
-}
-// call slide function by click
-leftBtn.onclick = () => slide("previous");
-rightBtn.onclick = () => slide("next");
-//slide function
-function slide(direction) {
-    if (direction == "next") {
-        count++;
-    } else {
-        count--;
-    }
-    checkCountValue();
-    for (const x of silderItems) {
-        x.classList.remove("active");
-    }
-    silderItems[count].classList.add("active");
 }
