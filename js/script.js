@@ -95,7 +95,7 @@ checkCountValue();
 function checkCountValue() {
     if (count == 0) {
         leftBtn.disabled = true;
-    } else if (count == slideLength - 1) {
+    } else if (count == slideLength-1) {
         rightBtn.disabled = true;
     } else {
         leftBtn.disabled = false;
